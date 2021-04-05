@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Clone BMG</string>
+    <string name="ic_home">Minha Conta</string>
+    <string name="ic_card">Cartões</string>
+    <string name="ic_graphic">Invest</string>
+    <string name="texto_banner_duvida">Dúvidas? Só me\nperguntar e eu te\najudo</string>
+</resources>
