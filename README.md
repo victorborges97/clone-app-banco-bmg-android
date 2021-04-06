@@ -36,7 +36,7 @@
 <pre>
 
 <span class="pl-c"><span class="pl-c">#</span> Clone o repositório</span>
-$ git clone https://github.com/victorborges97/clone-app-twitch
+$ git clone https://github.com/victorborges97/clone-app-banco-bmg-android
 <br>
 
 <span class="pl-c"><span class="pl-c">#</span> Acesse a pasta do projeto no Android Studio.</span>
