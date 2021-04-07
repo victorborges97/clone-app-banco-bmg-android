@@ -12,4 +12,13 @@
     <string name="primeiro_cardview_texto_detalhe">Veja o quanto você já ganhou\nusando a conta Bmg</string>
     <string name="primeiro_cardview_texto_navegacao">Acesse o resumo</string>
     <string name="primeiro_cardviewhorizontal_texto_detalhe">Até 12% de cashback nas suas\ncompras! Aproveite.</string>
+    <string name="frase_entre_cardviews">Veja o que temos pra você</string>
+    <string name="ver_extrato">Ver extrato</string>
+    <string name="pix">Pix</string>
+    <string name="pagar_nconta">Pagar\nconta</string>
+    <string name="transferir_ndinheiro">Transferir\ndinheiro</string>
+    <string name="fazer_ndep_sito">Fazer\ndepósito</string>
+    <string name="primeiro_cardviewhorizontal">Nova Loja Virtual Bmg</string>
+    <string name="acessar_loja_virtual_bmg">Acessar Loja Virtual Bmg</string>
+    <string name="todo">TODO</string>
 </resources>

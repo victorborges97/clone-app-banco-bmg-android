@@ -109,7 +109,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginVertical="14dp"
                         android:fontFamily="@font/montserrat"
-                        android:hint="Ver extrato"
+                        android:hint="@string/ver_extrato"
                         android:textColorHint="@color/texto_bold"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -165,13 +165,14 @@
                                 android:layout_marginTop="20dp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="TODO" />
                             <TextView
                                 android:id="@+id/info_text1_pix"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserrat"
-                                android:hint="Pix"
+                                android:hint="@string/pix"
                                 android:textAlignment="center"
                                 android:textColor="@color/texto_bold"
                                 android:textColorHint="@color/texto_bold"
@@ -213,14 +214,15 @@
                                 android:backgroundTint="@color/teal_200"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="TODO" />
 
                             <TextView
                                 android:id="@+id/info_text1_pagarconta"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserrat"
-                                android:hint="Pagar\nconta"
+                                android:hint="@string/pagar_nconta"
                                 android:textAlignment="center"
                                 android:textColor="@color/texto_bold"
                                 android:textColorHint="@color/texto_bold"
@@ -261,14 +263,15 @@
                                 android:backgroundTint="@color/teal_200"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="TODO" />
 
                             <TextView
                                 android:id="@+id/info_text1_tranferir"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserrat"
-                                android:hint="Transferir\ndinheiro"
+                                android:hint="@string/transferir_ndinheiro"
                                 android:textAlignment="center"
                                 android:textColor="@color/texto_bold"
                                 android:textColorHint="@color/texto_bold"
@@ -309,14 +312,15 @@
                                 android:backgroundTint="@color/teal_200"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="TODO" />
 
                             <TextView
                                 android:id="@+id/info_text1_deposito"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserrat"
-                                android:hint="Fazer\ndepósito"
+                                android:hint="@string/fazer_ndep_sito"
                                 android:textAlignment="center"
                                 android:textColor="@color/texto_bold"
                                 android:textColorHint="@color/texto_bold"
@@ -402,7 +406,8 @@
                         android:src="@drawable/contapositiva"
                         app:layout_constraintBottom_toBottomOf="@+id/info_text2_contapositiva"
                         app:layout_constraintStart_toEndOf="@+id/info_text2_contapositiva"
-                        app:layout_constraintTop_toTopOf="@+id/info_text2_contapositiva" />
+                        app:layout_constraintTop_toTopOf="@+id/info_text2_contapositiva"
+                        android:contentDescription="TODO" />
 
                     <View
                         android:id="@+id/divider_contapositiva"
@@ -441,7 +446,7 @@
                 android:layout_marginVertical="10dp"
                 android:layout_marginStart="24dp"
                 android:fontFamily="@font/montserrat"
-                android:hint="Veja o que temos pra você"
+                android:hint="@string/frase_entre_cardviews"
                 android:textColorHint="@color/texto_bold"
                 android:textSize="17sp"
                 android:textStyle="bold"
@@ -490,7 +495,7 @@
                                 android:layout_marginStart="24dp"
                                 android:layout_marginTop="16dp"
                                 android:fontFamily="@font/montserrat_bold"
-                                android:hint="Nova Loja Virtual Bmg"
+                                android:hint="@string/primeiro_cardviewhorizontal"
                                 android:textColorHint="@color/purple_500"
                                 android:textSize="18sp"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -531,7 +536,8 @@
                                 android:src="@drawable/novaloja"
                                 app:layout_constraintBottom_toBottomOf="@+id/info_text2_novaloja"
                                 app:layout_constraintStart_toEndOf="@+id/info_text2_novaloja"
-                                app:layout_constraintTop_toTopOf="@+id/info_text2_novaloja" />
+                                app:layout_constraintTop_toTopOf="@+id/info_text2_novaloja"
+                                android:contentDescription="@string/todo" />
 
                             <View
                                 android:id="@+id/divider_novaloja"
@@ -549,7 +555,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="24dp"
                                 android:fontFamily="@font/montserrat"
-                                android:hint="Acessar Loja Virtual Bmg"
+                                android:hint="@string/acessar_loja_virtual_bmg"
                                 android:textColorHint="@color/texto_bold"
                                 android:textSize="18sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
