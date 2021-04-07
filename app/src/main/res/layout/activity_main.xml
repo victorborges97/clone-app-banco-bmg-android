@@ -26,7 +26,7 @@
             <View
                 android:id="@+id/view2"
                 android:layout_width="wrap_content"
-                android:layout_height="148dp"
+                android:layout_height="64dp"
                 android:background="@color/purple_500"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,9 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_saldodaconta"
                 android:layout_width="0dp"
-                android:layout_height="188dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="188dp"
+                android:minHeight="148dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
@@ -43,7 +45,8 @@
                 app:cardCornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2">
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_layout_card_saldo"
@@ -57,7 +60,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="24dp"
                         android:fontFamily="@font/montserrat"
-                        android:hint="Saldo da conta"
+                        android:hint="@string/texto_mostrasaldo"
                         android:textColorHint="@color/texto_simples"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +72,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/montserrat"
-                        android:hint="R$ 0,70"
+                        android:hint="@string/texto_saldo_em_real"
                         android:textColorHint="@color/texto_bold"
                         android:textSize="22sp"
                         android:textStyle="bold"
@@ -83,7 +86,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/montserrat"
-                        android:hint="Toque para esconder"
+                        android:hint="@string/texto_esconder"
                         android:textColorHint="@color/texto_bold"
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -104,6 +107,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
+                        android:layout_marginVertical="14dp"
                         android:fontFamily="@font/montserrat"
                         android:hint="Ver extrato"
                         android:textColorHint="@color/texto_bold"
@@ -328,12 +332,13 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </HorizontalScrollView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_contapositiva"
                 android:layout_width="0dp"
-                android:layout_height="188dp"
+                android:layout_height="228dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
@@ -356,34 +361,59 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:hint="Conta Positiva"
+                        android:hint="@string/primeiro_cardview_conta_positiva"
                         android:textColorHint="@color/purple_500"
                         android:textSize="18sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:backgroundTint="#4AE1A4"
+                        android:clickable="false"
+                        android:layout_marginStart="17dp"
+                        android:rotation="0"
+                        android:visibility="visible"
+                        app:chipEndPadding="9dp"
+                        app:chipStartPadding="9dp"
+                        app:layout_constraintBottom_toTopOf="@+id/info_text2_contapositiva"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/info_text1_contapositiva" />
+
                     <TextView
                         android:id="@+id/info_text2_contapositiva"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="0dp"
                         android:fontFamily="@font/montserrat"
-                        android:hint="Veja o quanto você já ganhou\nusando a conta Bmg"
+                        android:hint="@string/primeiro_cardview_texto_detalhe"
                         android:textColorHint="@color/texto_bold"
                         android:textSize="16sp"
                         android:textStyle="normal"
                         app:layout_constraintStart_toStartOf="@+id/info_text1_contapositiva"
-                        app:layout_constraintTop_toBottomOf="@+id/info_text1_contapositiva" />
+                        app:layout_constraintTop_toBottomOf="@+id/chip4" />
+
+                    <ImageView
+                        android:id="@+id/img_contapositiva"
+                        android:layout_width="117dp"
+                        android:layout_height="126dp"
+                        android:src="@drawable/contapositiva"
+                        app:layout_constraintBottom_toBottomOf="@+id/info_text2_contapositiva"
+                        app:layout_constraintStart_toEndOf="@+id/info_text2_contapositiva"
+                        app:layout_constraintTop_toTopOf="@+id/info_text2_contapositiva" />
 
                     <View
                         android:id="@+id/divider_contapositiva"
                         android:layout_width="0dp"
                         android:layout_height="2dp"
-                        android:layout_marginTop="35dp"
                         android:background="?android:attr/listDivider"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/info_text2_contapositiva" />
+                        app:layout_constraintStart_toStartOf="parent" />
 
                     <TextView
                         android:id="@+id/info_text3_contapositiva_resumo"
@@ -391,12 +421,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
                         android:fontFamily="@font/montserrat"
-                        android:hint="Acesse o resumo"
+                        android:hint="@string/primeiro_cardview_texto_navegacao"
                         android:textColorHint="@color/texto_bold"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/divider_contapositiva" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -421,7 +452,7 @@
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView_novaloja"
                 android:layout_width="match_parent"
-                android:layout_height="207dp"
+                android:layout_height="230dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
@@ -440,7 +471,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_view_novaloja"
                         android:layout_width="match_parent"
-                        android:layout_height="198dp"
+                        android:layout_height="228dp"
                         android:layout_gravity="center"
                         app:cardCornerRadius="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -465,18 +496,42 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_novaloja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:backgroundTint="#4AE1A4"
+                                android:clickable="false"
+                                android:layout_marginStart="17dp"
+                                android:rotation="0"
+                                android:visibility="visible"
+                                app:chipEndPadding="9dp"
+                                app:chipStartPadding="9dp"
+                                app:layout_constraintBottom_toTopOf="@+id/info_text2_novaloja"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/info_text1_novaloja" />
+
                             <TextView
                                 android:id="@+id/info_text2_novaloja"
-                                android:layout_width="wrap_content"
+                                android:layout_width="237dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
+                                android:layout_marginTop="0dp"
                                 android:fontFamily="@font/montserrat"
-                                android:hint="Até 12% de cashback nas suas\ncompras! Aproveite."
+                                android:hint="@string/primeiro_cardviewhorizontal_texto_detalhe"
                                 android:textColorHint="@color/texto_bold"
                                 android:textSize="16sp"
                                 android:textStyle="normal"
                                 app:layout_constraintStart_toStartOf="@+id/info_text1_novaloja"
-                                app:layout_constraintTop_toBottomOf="@+id/info_text1_novaloja" />
+                                app:layout_constraintTop_toBottomOf="@+id/chip_novaloja" />
+
+                            <ImageView
+                                android:id="@+id/img_novaloja"
+                                android:layout_width="117dp"
+                                android:layout_height="126dp"
+                                android:src="@drawable/novaloja"
+                                app:layout_constraintBottom_toBottomOf="@+id/info_text2_novaloja"
+                                app:layout_constraintStart_toEndOf="@+id/info_text2_novaloja"
+                                app:layout_constraintTop_toTopOf="@+id/info_text2_novaloja" />
 
                             <View
                                 android:id="@+id/divider_novaloja"
@@ -508,7 +563,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_view_indicando"
                         android:layout_width="0dp"
-                        android:layout_height="198dp"
+                        android:layout_height="228dp"
                         android:layout_gravity="center"
                         android:layout_marginStart="8dp"
                         app:cardCornerRadius="8dp"
@@ -523,29 +578,53 @@
 
                             <TextView
                                 android:id="@+id/info_text1_indicando"
-                                android:layout_width="wrap_content"
+                                android:layout_width="204dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="24dp"
                                 android:layout_marginTop="16dp"
                                 android:fontFamily="@font/montserrat_bold"
-                                android:hint="Ganhe $$ indicando o\nBmg"
+                                android:hint="Ganhe $$ indicando o Bmg"
                                 android:textColorHint="@color/purple_500"
                                 android:textSize="18sp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chip_indicando"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:backgroundTint="#4AE1A4"
+                                android:clickable="false"
+                                android:layout_marginStart="17dp"
+                                android:rotation="0"
+                                android:visibility="visible"
+                                app:chipEndPadding="9dp"
+                                app:chipStartPadding="9dp"
+                                app:layout_constraintBottom_toTopOf="@+id/info_text2_indicando"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/info_text1_indicando" />
+
                             <TextView
                                 android:id="@+id/info_text2_indicando"
-                                android:layout_width="wrap_content"
+                                android:layout_width="237dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
                                 android:fontFamily="@font/montserrat"
-                                android:hint="Aqui é assim, a cada conta aberta\nvocê ganha $$"
+                                android:hint="Aqui é assim, a cada conta aberta você ganha $$"
                                 android:textColorHint="@color/texto_bold"
                                 android:textSize="16sp"
                                 android:textStyle="normal"
                                 app:layout_constraintStart_toStartOf="@+id/info_text1_indicando"
-                                app:layout_constraintTop_toBottomOf="@+id/info_text1_indicando" />
+                                app:layout_constraintTop_toBottomOf="@+id/chip_indicando" />
+
+                            <ImageView
+                                android:id="@+id/img_indicando"
+                                android:layout_width="117dp"
+                                android:layout_height="126dp"
+                                android:src="@drawable/novaloja"
+                                app:layout_constraintBottom_toBottomOf="@+id/info_text2_indicando"
+                                app:layout_constraintStart_toEndOf="@+id/info_text2_indicando"
+                                app:layout_constraintTop_toTopOf="@+id/info_text2_indicando"
+                                app:layout_constraintVertical_bias="0.487" />
 
                             <View
                                 android:id="@+id/divider_indicando"
@@ -608,6 +687,15 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_duvidas"
+                        android:layout_width="115dp"
+                        android:layout_height="119dp"
+                        android:src="@drawable/duvidas"
+                        app:layout_constraintBottom_toBottomOf="@+id/info_text1_duvidas"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/info_text1_duvidas" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
