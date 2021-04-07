@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:elevation="2dp"
+    android:background="@color/purple_500">
+
+    <ImageView
+        android:id="@+id/toolbar_icon_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ic_menu"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/teal_200" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/toolbar_name_ola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Olá,"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_icon_menu"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_icon_menu" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/toolbar_name_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="JOAO"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_icon_menu"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_name_ola"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_name_ola"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/toolbar_icon_perfil"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/bg_ic_perfil"
+        android:padding="5dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

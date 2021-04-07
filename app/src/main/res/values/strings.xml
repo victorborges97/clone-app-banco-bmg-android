@@ -5,13 +5,13 @@
     <string name="ic_graphic">Invest</string>
     <string name="texto_banner_duvida">Dúvidas? Só me\nperguntar e eu te\najudo</string>
     <string name="texto_mostrasaldo">Saldo da conta</string>
-    <string name="texto_saldo_em_real">R$ 0,70</string>
+    <string name="texto_saldo_em_real">R$ 1,00</string>
     <string name="texto_esconder">Toque para esconder</string>
     <string name="texto_mostrar">Toque para mostrar</string>
     <string name="primeiro_cardview_conta_positiva">Conta Positiva</string>
     <string name="primeiro_cardview_texto_detalhe">Veja o quanto você já ganhou\nusando a conta Bmg</string>
     <string name="primeiro_cardview_texto_navegacao">Acesse o resumo</string>
-    <string name="primeiro_cardviewhorizontal_texto_detalhe">Até 12% de cashback nas suas\ncompras! Aproveite.</string>
+    <string name="primeiro_cardviewhorizontal_texto_detalhe">Até 12% de cashback nas suas compras! Aproveite.</string>
     <string name="frase_entre_cardviews">Veja o que temos pra você</string>
     <string name="ver_extrato">Ver extrato</string>
     <string name="pix">Pix</string>

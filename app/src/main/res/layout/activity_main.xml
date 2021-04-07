@@ -7,15 +7,20 @@
     android:background="@color/fundo_inicial"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
+        android:layout_marginTop="65dp"
         android:layout_marginBottom="20dp"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/include">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint_layout_scrollview"
@@ -36,17 +41,16 @@
                 android:id="@+id/card_view_saldodaconta"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:maxHeight="188dp"
-                android:minHeight="148dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
+                android:maxHeight="188dp"
+                android:minHeight="148dp"
                 android:translationY="-50dp"
                 app:cardCornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2"
-                >
+                app:layout_constraintTop_toBottomOf="@+id/view2">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_layout_card_saldo"
@@ -65,6 +69,21 @@
                         android:textSize="16sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/icon_refresh_saldo"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/bg_ic_perfil"
+                        android:backgroundTint="@color/bg_icon_refreshe"
+                        android:padding="6dp"
+                        android:rotation="174"
+                        android:src="@drawable/ic_refresh"
+                        app:layout_constraintBottom_toBottomOf="@+id/info_text1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/info_text1"
+                        app:tint="@color/texto_bold" />
 
                     <TextView
                         android:id="@+id/info_text_saldo"
@@ -106,8 +125,8 @@
                         android:id="@+id/info_text_extrato"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
                         android:layout_marginVertical="14dp"
+                        android:layout_marginStart="24dp"
                         android:fontFamily="@font/montserrat"
                         android:hint="@string/ver_extrato"
                         android:textColorHint="@color/texto_bold"
@@ -141,6 +160,7 @@
                     tools:ignore="ExtraText">
 
                     /*PIX*/
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_view_pix"
                         android:layout_width="108dp"
@@ -160,13 +180,14 @@
                                 android:id="@+id/icon_pix"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
                                 android:background="@drawable/ic_pix"
                                 android:backgroundTint="@color/teal_200"
-                                android:layout_marginTop="20dp"
+                                android:contentDescription="TODO"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                android:contentDescription="TODO" />
+                                app:layout_constraintTop_toTopOf="parent" />
+
                             <TextView
                                 android:id="@+id/info_text1_pix"
                                 android:layout_width="wrap_content"
@@ -188,6 +209,7 @@
                     </androidx.cardview.widget.CardView>
 
                     /*PAGAR CONTA*/
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_view_pagarconta"
                         android:layout_width="108dp"
@@ -212,10 +234,10 @@
                                 android:layout_marginTop="20dp"
                                 android:background="@drawable/ic_barcode"
                                 android:backgroundTint="@color/teal_200"
+                                android:contentDescription="TODO"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                android:contentDescription="TODO" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
                                 android:id="@+id/info_text1_pagarconta"
@@ -238,6 +260,7 @@
                     </androidx.cardview.widget.CardView>
 
                     /*TRANSFERENCIA*/
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_view_transferir"
                         android:layout_width="108dp"
@@ -261,10 +284,10 @@
                                 android:layout_marginTop="20dp"
                                 android:background="@drawable/ic_transfer"
                                 android:backgroundTint="@color/teal_200"
+                                android:contentDescription="TODO"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                android:contentDescription="TODO" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
                                 android:id="@+id/info_text1_tranferir"
@@ -287,6 +310,7 @@
                     </androidx.cardview.widget.CardView>
 
                     /*NAO SEI*/
+
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_view_seila"
                         android:layout_width="108dp"
@@ -310,10 +334,10 @@
                                 android:layout_marginTop="20dp"
                                 android:background="@drawable/ic_deposito"
                                 android:backgroundTint="@color/teal_200"
+                                android:contentDescription="TODO"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                android:contentDescription="TODO" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
                                 android:id="@+id/info_text1_deposito"
@@ -375,9 +399,9 @@
                         android:id="@+id/chip4"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
+                        android:layout_marginStart="17dp"
                         android:backgroundTint="#4AE1A4"
                         android:clickable="false"
-                        android:layout_marginStart="17dp"
                         android:rotation="0"
                         android:visibility="visible"
                         app:chipEndPadding="9dp"
@@ -403,19 +427,19 @@
                         android:id="@+id/img_contapositiva"
                         android:layout_width="117dp"
                         android:layout_height="126dp"
+                        android:contentDescription="TODO"
                         android:src="@drawable/contapositiva"
                         app:layout_constraintBottom_toBottomOf="@+id/info_text2_contapositiva"
                         app:layout_constraintStart_toEndOf="@+id/info_text2_contapositiva"
-                        app:layout_constraintTop_toTopOf="@+id/info_text2_contapositiva"
-                        android:contentDescription="TODO" />
+                        app:layout_constraintTop_toTopOf="@+id/info_text2_contapositiva" />
 
                     <View
                         android:id="@+id/divider_contapositiva"
                         android:layout_width="0dp"
                         android:layout_height="2dp"
-                        android:background="?android:attr/listDivider"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="50dp"
+                        android:background="?android:attr/listDivider"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -457,7 +481,7 @@
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView_novaloja"
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="16dp"
@@ -469,7 +493,7 @@
                 app:layout_constraintTop_toBottomOf="@id/info_text_vejaoquetemosparavc">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     tools:ignore="ExtraText">
 
@@ -505,9 +529,9 @@
                                 android:id="@+id/chip_novaloja"
                                 android:layout_width="wrap_content"
                                 android:layout_height="20dp"
+                                android:layout_marginStart="17dp"
                                 android:backgroundTint="#4AE1A4"
                                 android:clickable="false"
-                                android:layout_marginStart="17dp"
                                 android:rotation="0"
                                 android:visibility="visible"
                                 app:chipEndPadding="9dp"
@@ -518,7 +542,8 @@
 
                             <TextView
                                 android:id="@+id/info_text2_novaloja"
-                                android:layout_width="237dp"
+                                android:layout_width="wrap_content"
+                                android:maxWidth="227dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="0dp"
                                 android:fontFamily="@font/montserrat"
@@ -532,12 +557,13 @@
                             <ImageView
                                 android:id="@+id/img_novaloja"
                                 android:layout_width="117dp"
-                                android:layout_height="126dp"
+                                android:layout_height="117dp"
+                                android:contentDescription="@string/todo"
                                 android:src="@drawable/novaloja"
                                 app:layout_constraintBottom_toBottomOf="@+id/info_text2_novaloja"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/info_text2_novaloja"
-                                app:layout_constraintTop_toTopOf="@+id/info_text2_novaloja"
-                                android:contentDescription="@string/todo" />
+                                app:layout_constraintTop_toTopOf="@+id/info_text2_novaloja" />
 
                             <View
                                 android:id="@+id/divider_novaloja"
@@ -547,7 +573,7 @@
                                 android:background="?android:attr/listDivider"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"  />
+                                app:layout_constraintStart_toStartOf="parent" />
 
                             <TextView
                                 android:id="@+id/info_text3_novaloja_resumo"
@@ -599,9 +625,9 @@
                                 android:id="@+id/chip_indicando"
                                 android:layout_width="wrap_content"
                                 android:layout_height="20dp"
+                                android:layout_marginStart="17dp"
                                 android:backgroundTint="#4AE1A4"
                                 android:clickable="false"
-                                android:layout_marginStart="17dp"
                                 android:rotation="0"
                                 android:visibility="visible"
                                 app:chipEndPadding="9dp"
@@ -612,7 +638,8 @@
 
                             <TextView
                                 android:id="@+id/info_text2_indicando"
-                                android:layout_width="237dp"
+                                android:layout_width="wrap_content"
+                                android:maxWidth="227dp"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/montserrat"
                                 android:hint="Aqui é assim, a cada conta aberta você ganha $$"
@@ -625,9 +652,10 @@
                             <ImageView
                                 android:id="@+id/img_indicando"
                                 android:layout_width="117dp"
-                                android:layout_height="126dp"
+                                android:layout_height="117dp"
                                 android:src="@drawable/novaloja"
                                 app:layout_constraintBottom_toBottomOf="@+id/info_text2_indicando"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/info_text2_indicando"
                                 app:layout_constraintTop_toTopOf="@+id/info_text2_indicando"
                                 app:layout_constraintVertical_bias="0.487" />
